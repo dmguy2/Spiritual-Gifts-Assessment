@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5ff;
+    color: #333;
+}
+
+#landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f5ff;
+}
+
+#landing-page h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#landing-page p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 2rem;
+    max-width: 700px;
+}
+
+#begin-survey {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#begin-survey:hover {
+    background-color: #2980b9;
+}
+
+#survey-container, #results-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#survey-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#question-container {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#results-container {
+    display: none;
+    opacity: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#question-text {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #34495e;
+}
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #2c3e50;
+    font-size: 16px;
+    text-align: left;
+}
+
+.option:hover {
+    background-color: #ebf5ff;
+}
+
+.option.selected {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#results-chart {
+    max-width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+#download-pdf {
+    display: block;
+    margin: 30px auto;
+    background-color: #2ecc71;
+}
+
+#download-pdf:hover {
+    background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #survey-container, #results-container {
+        padding: 20px;
+    }
+    
+    .option {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #landing-page h1 {
+        font-size: 2rem;
+    }
+
+    #landing-page p {
+        font-size: 1rem;
+    }
+
+    #begin-survey {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
