@@ -1,1 +1,0 @@
-# Spiritual-Gifts-Assessment
