@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Gifts Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <div id="landing-page">
+        <h1>Spiritual Gifts Assessment</h1>
+        <p>Discover your unique spiritual gifts and how you can use them to serve.</p>
+        <button id="begin-survey">Begin Survey</button>
+    </div>
+
+    <div id="survey-container" style="display: none;">
+        <h1>Spiritual Gifts Survey</h1>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="options">
+                <button class="option" data-value="1">1 - Not at all characteristic of me</button>
+                <button class="option" data-value="2">2 - Occasionally characteristic of me</button>
+                <button class="option" data-value="3">3 - Frequently characteristic of me</button>
+                <button class="option" data-value="4">4 - Most of the time this would describe me</button>
+                <button class="option" data-value="5">5 - Highly characteristic of me</button>
+            </div>
+        </div>
+        <div id="navigation">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn" disabled>Next</button>
+        </div>
+    </div>
+
+    <div id="results-container" style="display: none;">
+        <h2>Your Spiritual Gifts Survey Results</h2>
+        <canvas id="results-chart"></canvas>
+        <button id="download-pdf">Download PDF Report</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
