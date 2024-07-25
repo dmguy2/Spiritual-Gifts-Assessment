@@ -6,16 +6,16 @@
     <title>Spiritual Gifts Assessment</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div id="landing-page">
         <h1>Spiritual Gifts Assessment</h1>
         <p>Discover your unique spiritual gifts and how you can use them to serve.</p>
+        <input type="text" id="participant-name" placeholder="Enter your full name" required>
         <button id="begin-survey">Begin Survey</button>
     </div>
-
     <div id="survey-container" style="display: none;">
         <h1>Spiritual Gifts Survey</h1>
         <div id="question-container">
@@ -33,13 +33,13 @@
             <button id="next-btn" disabled>Next</button>
         </div>
     </div>
-
     <div id="results-container" style="display: none;">
         <h2>Your Spiritual Gifts Survey Results</h2>
-        <canvas id="results-chart"></canvas>
+        <div id="results-chart-wrapper">
+            <canvas id="results-chart"></canvas>
+        </div>
         <button id="download-pdf">Download PDF Report</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
